@@ -1,6 +1,11 @@
 import React from 'react';
 import { Card, Col, Container, Row, Table } from 'react-bootstrap';
 
+import users_icon from '../images/iconubig.svg'
+import usersf_icon from '../images/iconusbig.svg'
+import ff_icon from '../images/iconuslbig.svg'
+import ss_icon from '../images/iconussbig.svg'
+
 const Dashboard = () => {
     return (
         <>
@@ -10,40 +15,48 @@ const Dashboard = () => {
 
                     <Row className='mb-5'>
                         <Col>
-                            <Card>
-                                <span>Icon</span>
+                            <Card className='p-3'>
+                                <span>
+                                    <img src={users_icon} alt="icon" />
+                                </span>
                                 <h5>Users</h5>
                                 <h4>Figures</h4>
                             </Card>
                         </Col>
 
                         <Col>
-                            <Card>
-                                <span>Icon</span>
-                                <h5>Users</h5>
-                                <h4>Figures</h4>
+                            <Card className='p-3'>
+                                <span>
+                                    <img src={usersf_icon} alt="icon" />
+                                </span>
+                                <h6>Users</h6>
+                                <h5>Figures</h5>
                             </Card>
                         </Col>
 
                         <Col>
-                            <Card>
-                                <span>Icon</span>
-                                <h5>Users</h5>
-                                <h4>Figures</h4>
+                            <Card className='p-3'>
+                                <span>
+                                    <img src={ff_icon} alt="icon" />
+                                </span>
+                                <h6>Users</h6>
+                                <h5>Figures</h5>
                             </Card>
                         </Col>
 
                         <Col>
-                            <Card>
-                                <span>Icon</span>
-                                <h5>Users</h5>
-                                <h4>Figures</h4>
+                            <Card className='p-3'>
+                                <span>
+                                    <img src={ss_icon} alt="icon" />
+                                </span>
+                                <h6>Users</h6>
+                                <h5>Figures</h5>
                             </Card>
                         </Col>
                     </Row>
 
-                    <Row className='p-3'>
-                        <Card>
+                    <Row className='m-1'>
+                        <Card className='pt-3 pb-1 px-3'>
                             <Table striped bordered hover>
                                 <thead>
                                     <tr>

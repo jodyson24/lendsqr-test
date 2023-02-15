@@ -9,19 +9,20 @@ const initialState = {
     password: ""
 }
 
-// interface user {
-//     email: String,
-//     password: String
-// }
+type user = {
+    email: string ,
+    password: string | any
+}
 
 const Login = () => {
-    const [user, setUser] = useState<any>(initialState)
+    const [user, setUser] = useState<user>(initialState)
     const { email, password } = user;
 
     const handleChange = (event: React.ChangeEvent) => {
         const { name, value } = event.target as HTMLInputElement;
         setUser({ ...user, [name]: value })
     }
+
     return (
         <>
             <div className='page'>
@@ -37,7 +38,7 @@ const Login = () => {
                         <Col lg={6}>
                             <Card className='p-5' style={{ height: '700px' }}>
                                 <Form style={{marginTop: '105px', width: '450px'}}>
-                                    <h6 className='mb-3' style={{fontSize: '40px', fontWeight: '700', color: '#213F7D'}}>Welcome!</h6>
+                                    <h6 className='login-text mb-3' >Welcome!</h6>
                                     <p className='mb-5'>Enter details to login.</p>
 
                                     <Col>
@@ -53,7 +54,7 @@ const Login = () => {
                                     </Col>
 
                                     <Col className='mb-3'>
-                                        <h6 className='mb-4' style={{fontSize: '12px', color: '#39CDCC'}}>FORGOT PASSWORD?</h6>
+                                        <h6 className='mb-4 forgot-pass'>FORGOT PASSWORD?</h6>
                                         <Button style={{background: '#39CDCC'}} className='btn-sm p-2 w-100' type="submit">
                                             Submit
                                         </Button>

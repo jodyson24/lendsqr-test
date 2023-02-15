@@ -3,18 +3,59 @@
     display: flex;
 }
 
-
 // Sidenav
+.link-switch {
+    margin-bottom: 10px;
+}
 .link-switch a {
     display: block;
+    margin-bottom: 15px;
 }
-.nav-section h6{
+
+.nav-section{
+    margin-bottom: 15px;
+}
+.nav-section h6 {
     display: inline;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #545F7D;
+    // margin-bottom: 25px;
 }
+
 .nav-section ul {
     display: inline;
 }
-.nav-section ul li{
+
+.nav-section ul li {
     list-style: disc;
     display: block;
+    margin-bottom: 15px;
+}
+
+.nav-section ul li a,
+.link-switch a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #213F7D;
+    line-height: 19px;
+}
+
+.nav-section ul li a span img,
+.link-switch a span img {
+    width: 16px;
+    margin-right: 5px;
+}
+
+// Login Page
+.login-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: #213F7D
+}
+
+.forgot-pass {
+    font-size: 12px;
+    color: #39CDCC
 }
