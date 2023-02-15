@@ -1,8 +1,12 @@
 import React from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 const Users = () => {
-    return(
+    return (
         <>
+            <div className='app-page'>
+                
+            </div>
         </>
     );
 }

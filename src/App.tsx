@@ -6,14 +6,21 @@ import Dashboard from './pages/Dashboard';
 import Users from './pages/Users';
 import UserDetails from './pages/UserDetails';
 
+import Header from './components/header/Header';
+import SideNav from './components/navigation/SideNav';
+
 const App = () => {
   return (
     <Router>
       <div className="App">
+        <Header />
 
-        <Routes>
-          <Route path="/" element={ <Login/> } />
-        </Routes>
+        <div className='d-flex'>
+          <SideNav />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

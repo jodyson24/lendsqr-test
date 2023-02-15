@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 code {
@@ -12,6 +15,10 @@ code {
     monospace;
 }
 
+li {
+  list-style: none;
+}
 
 /* Imported CSS */
-@import url('./App.css');
+@import url('./App.scss');
+@import url('./pages.scss');
