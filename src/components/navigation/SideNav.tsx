@@ -108,8 +108,8 @@ const SideNav = () => {
                 </div>
 
                 <div className="nav-section">
-                    <h6 className='mb-3'>SETTINGS</h6>
-                    <ul>
+                    <h6>SETTINGS</h6>
+                    <ul className='pt-3'>
                         {
                             settingsNav.map(({ i, path, name, icon }: any) => (
                                 <li key={i}>
