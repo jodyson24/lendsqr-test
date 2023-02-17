@@ -30,32 +30,32 @@ import clipboard from '../../images/clipboard-list 1.svg'
 const SideNav = () => {
 
     const customerNav = [
-        { name: "Users", icon: users_i, path: "/" },
+        { name: "Users", icon: users_i, path: "/users" },
         { name: "Guarantors", icon: guarantors_i, path: "#" },
-        { name: "Loans", icon: loans_i, path: "/" },
-        { name: "Decision Models", icon: dec_i, path: "/" },
-        { name: "Savings", icon: savings_i, path: "/" },
-        { name: "Loan Requests", icon: loanreq_i, path: "/" },
-        { name: "Whitelist", icon: white_i, path: "/" },
-        { name: "Karma", icon: karma_i, path: "/" }
+        { name: "Loans", icon: loans_i, path: "#" },
+        { name: "Decision Models", icon: dec_i, path:"#" },
+        { name: "Savings", icon: savings_i, path:"#"},
+        { name: "Loan Requests", icon: loanreq_i, path: "#" },
+        { name: "Whitelist", icon: white_i, path: "#" },
+        { name: "Karma", icon: karma_i, path: "#" }
     ]
 
     const businessNav = [
-        { name: "Organization", icon: org_i, path: "/" },
-        { name: "Loan Products", icon: lp_i, path: "/" },
-        { name: "Saving Products", icon: svp_i, path: "/" },
-        { name: "Fees and Charges", icon: fees_i, path: "/" },
-        { name: "Transactions", icon: trans_i, path: "/" },
-        { name: "Services", icon: service_i, path: "/" },
-        { name: "Service Account", icon: seracc_i, path: "/" },
-        { name: "Settlements", icon: sett_i, path: "/" },
-        { name: "Reports", icon: rep_i, path: "/" },
+        { name: "Organization", icon: org_i, path: "#" },
+        { name: "Loan Products", icon: lp_i, path: "#" },
+        { name: "Saving Products", icon: svp_i, path: "#" },
+        { name: "Fees and Charges", icon: fees_i, path: "#" },
+        { name: "Transactions", icon: trans_i, path: "#" },
+        { name: "Services", icon: service_i, path: "#" },
+        { name: "Service Account", icon: seracc_i, path: "#" },
+        { name: "Settlements", icon: sett_i, path: "#" },
+        { name: "Reports", icon: rep_i, path: "#" },
     ]
 
     const settingsNav = [
-        { name: "Preferences", icon: sliders, path: "/" },
-        { name: "Fees and Pricing", icon: feespri_i, path: "/" },
-        { name: "Audit Logs", icon: clipboard, path: "/" },
+        { name: "Preferences", icon: sliders, path: "#" },
+        { name: "Fees and Pricing", icon: feespri_i, path: "#" },
+        { name: "Audit Logs", icon: clipboard, path: "#" },
     ]
 
     return (
@@ -79,11 +79,11 @@ const SideNav = () => {
                     <h6 className='mb-3'>CUSTOMERS</h6>
                     <ul>
                         {
-                            customerNav.map(({ i, path, name, icon }: any) => (
+                            customerNav.map(( e: any, i: any) => (
                                 <li key={i}>
-                                    <Link to={path}>
-                                        <span> <img src={icon} alt="link" /> </span>
-                                        {name}
+                                    <Link to={e.path}>
+                                        <span> <img src={e.icon} alt="link" /> </span>
+                                        {e.name}
                                     </Link>
                                 </li>
                             ))
@@ -95,11 +95,11 @@ const SideNav = () => {
                     <h6 className='mb-3'>BUSINESS</h6>
                     <ul>
                         {
-                            businessNav.map(({ i, path, name, icon }: any) => (
+                            businessNav.map((e: any, i: any) => (
                                 <li key={i}>
-                                    <Link to={path} >
-                                        <span> <img src={icon} alt="link" /> </span>
-                                        {name}
+                                    <Link to={e.path} >
+                                        <span> <img src={e.icon} alt="link" /> </span>
+                                        {e.name}
                                     </Link>
                                 </li>
                             ))
@@ -111,11 +111,11 @@ const SideNav = () => {
                     <h6>SETTINGS</h6>
                     <ul className='pt-3'>
                         {
-                            settingsNav.map(({ i, path, name, icon }: any) => (
+                            settingsNav.map((e: any, i: any) => (
                                 <li key={i}>
-                                    <Link to={path}>
-                                        <span> <img src={icon} alt="link" /> </span>
-                                        {name}
+                                    <Link to={e.path}>
+                                        <span> <img src={e.icon} alt="link" /> </span>
+                                        {e.name}
                                     </Link>
                                 </li>
                             ))

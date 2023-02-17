@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Container, Row, Col, Button, Form, Card } from 'react-bootstrap';
+import { GlobalState } from '../GlobalState';
+import { loginUser } from '../api/auth';
 
 import page_img from '../images/pablo-sign-in 1signin.svg'
 import logo from '../images/Grouplogo.svg'
@@ -18,15 +20,24 @@ const Login = () => {
     const [user, setUser] = useState<user>(initialState)
     const { email, password } = user;
 
+    const state = useContext(GlobalState)
+    const auth = state.auth
+
     const handleChange = (event: React.ChangeEvent) => {
         const { name, value } = event.target as HTMLInputElement;
         setUser({ ...user, [name]: value })
     }
 
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault()
+        await loginUser(user.email, user.password)
+        window.location.href = "/";
+    }
+
     return (
         <>
-            <div className='page'>
-                <Container>
+            <div className='page' style={{ width: auth ? '85%' : '100%'}}>
+                <Container fluid  className='px-5'>
                     <Row className='py-5'>
                         <Col lg={6}>
                             <img src={logo} className="mb-5" alt="logo" />
@@ -37,7 +48,7 @@ const Login = () => {
                         </Col>
                         <Col lg={6}>
                             <Card className='p-5' style={{ height: '700px' }}>
-                                <Form style={{marginTop: '105px', width: '450px'}}>
+                                <Form onSubmit={handleSubmit} style={{marginTop: '105px', width: '450px'}}>
                                     <h6 className='login-text mb-3' >Welcome!</h6>
                                     <p className='mb-5'>Enter details to login.</p>
 

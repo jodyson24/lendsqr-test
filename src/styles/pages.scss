@@ -1,4 +1,6 @@
 $tcGreen: #39CDCC;
+$tcBlue: #213F7D;
+$detailsTextColor: #545F7D;
 
 
 // Header
@@ -6,9 +8,10 @@ $tcGreen: #39CDCC;
     background-color: $tcGreen;
     color: #fff;
 }
+
 .header-nav-list {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 10px;
 
     li {
@@ -115,4 +118,63 @@ $tcGreen: #39CDCC;
     letter-spacing: 0em;
     text-align: left;
     color: #213F7D;
+}
+
+
+
+// USER DETAILS
+.user-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: $tcBlue;
+}
+
+.user-overview-card {
+
+    .username,
+    .acc-bal {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+        color: $tcBlue;
+    }
+
+    .acc-num {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: $tcBlue;
+    }
+
+    .user-id {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $detailsTextColor
+    }
+}
+
+.details-box {
+    color: $detailsTextColor;
+
+    .setion-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: $tcBlue;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+
+    h6 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
