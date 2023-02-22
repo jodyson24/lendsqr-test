@@ -19,12 +19,12 @@ const App = () => {
       <div className="App">
         {auth && <Header />}
 
-        <div className='d-flex'>
+        <div className='' style={{ width: '100%', display: auth ? 'flex': 'block' }}>
           {auth && <SideNav />}
           <Routes>
-            <Route path="/" element={ auth ? <Users /> : <Login /> } />
-            <Route path="/users" element={ auth ? <Users /> : <Login /> } />
-            <Route path="/users/:id" element={ auth ? <UserDetails /> : <Login /> } />
+            <Route path="/" element={auth ? <Users /> : <Login />} />
+            <Route path="/users" element={auth ? <Users /> : <Login />} />
+            <Route path="/users/:id" element={auth ? <UserDetails /> : <Login />} />
           </Routes>
         </div>
       </div>

@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Card } from 'react-bootstrap';
-import { GlobalState } from '../GlobalState';
 import { loginUser } from '../api/auth';
 
 import page_img from '../images/pablo-sign-in 1signin.svg'
@@ -20,9 +19,6 @@ const Login = () => {
     const [user, setUser] = useState<user>(initialState)
     const { email, password } = user;
 
-    const state = useContext(GlobalState)
-    const auth = state.auth
-
     const handleChange = (event: React.ChangeEvent) => {
         const { name, value } = event.target as HTMLInputElement;
         setUser({ ...user, [name]: value })
@@ -36,8 +32,9 @@ const Login = () => {
 
     return (
         <>
-            <div className='page' style={{ width: auth ? '85%' : '100% !important' }}>
-                <div className='' style={{ margin: '0 auto', width: '85%'}}>
+            <div className='page'>
+                {/* <div className='' style={{ margin: '0 auto', width: '85%'}}> */}
+
                     <Container className='px-5'>
                         <Row className='py-5'>
                             <Col lg={6}>
@@ -76,7 +73,8 @@ const Login = () => {
                             </Col>
                         </Row>
                     </Container>
-                </div>
+
+                {/* </div> */}
            </div>
         </>
     );
