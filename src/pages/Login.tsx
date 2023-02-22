@@ -77,7 +77,7 @@ const Login = () => {
                         </Row>
                     </Container>
                 </div>
->            </div>
+           </div>
         </>
     );
 }
