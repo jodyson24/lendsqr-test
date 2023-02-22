@@ -9,6 +9,12 @@ import avatar from '../../images/avatar.svg'
 import dropdownIcon from '../../images/np_dropdown_615120_000000 1.svg'
 
 const Header = () => {
+    
+    const logoutUser = () => {
+        window.localStorage.removeItem('firstLogin')
+        // window.location = "/"
+    }
+
     return (
         <>
             <div className='header'>
@@ -37,7 +43,7 @@ const Header = () => {
                             <li>
                                 <img src={avatar} alt="avatar" />
                             </li>
-                            <li >
+                            <li onClick={logoutUser} style={{ cursor: 'pointer' }}>
                                 Adedeji
                                 <img src={dropdownIcon} alt="dropdown-icon" />
                             </li>
