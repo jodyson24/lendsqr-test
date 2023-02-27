@@ -215,7 +215,7 @@ const UserDetails = () => {
                                     <Row className='mb-3'>
                                         <Col>
                                             <p className='txt-uppercase'>Full name</p>
-                                            <h6>  {userDetails.guarantor.full_name} </h6>
+                                            <h6>  {userDetails.guarantor.fullname} </h6>
                                         </Col>
                                         <Col>
                                             <p className='txt-uppercase'>phone number</p>
